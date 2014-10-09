@@ -6915,9 +6915,9 @@ ul.nav {
 
 .navbar {
   background-color: #27244A;
-  padding-left: 2%; }
+  padding-left: 2px; }
   .navbar ul.header-nav li {
-    padding: 2%;
+    padding: 2% 3%;
     margin-left: -2px;
     margin-right: -2px; }
   .navbar ul.header-nav li:hover, .navbar ul.header-nav li.current-menu-item {
@@ -6956,7 +6956,8 @@ ul.nav {
 
 .page-container {
   background-color: #F5F5F6;
-  height: auto; }
+  height: auto;
+  padding-bottom: 1.875rem; }
   .page-container .row {
     max-width: 96%; }
 
@@ -6965,11 +6966,11 @@ ul.nav {
   border: 1px solid #E8E8E8;
   -moz-box-shadow: 2px 2px 2px 0px rgba(215, 215, 215, 0.55);
   box-shadow: 2px 2px 2px 0px rgba(215, 215, 215, 0.55);
-  margin-bottom: 1.875rem; }
+  margin-top: 1.875rem; }
 
 .page-header-container {
   background-color: #686680;
-  padding: 2% 4%; }
+  padding: 2% 3%; }
   .page-header-container h1 {
     margin-top: 0;
     padding-top: 0.5rem;
@@ -7018,9 +7019,6 @@ ul.nav {
     margin-bottom: 1.25rem; }
   .home-box .home-box-content p.read-more {
     margin-bottom: 0.5rem; }
-
-.companies-boxes {
-  margin-top: 1.875rem; }
 
 .companies-filters .company-filter-header h3 {
   color: #686680;

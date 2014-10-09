@@ -1,6 +1,7 @@
 .page-container {
   background-color: $bg-color;
   height: auto;
+  padding-bottom: 1.875rem;
   .row {
     max-width: 96%;
   }
@@ -10,11 +11,11 @@
   border: 1px solid #E8E8E8;
   -moz-box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
   box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
-  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
 }
 .page-header-container {
   background-color: $primary-color-light;
-  padding: 2% 4%;
+  padding: 2% 3%;
   h1 {
     margin-top: 0;
     padding-top: 0.5rem;
@@ -83,9 +84,6 @@
 }
 
 //our companies
-.companies-boxes {
-  margin-top: 1.875rem;
-}
 .companies-filters {
   .company-filter-header h3 {
     color: $primary-color-light;

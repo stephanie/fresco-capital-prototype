@@ -18,10 +18,11 @@ ul.nav {
 
 .navbar {
   background-color: $primary-color-dark;
-  padding-left: 2%;
+  padding-left: 2px;
+  // padding-left: 2%;
   ul.header-nav {
     li {
-      padding: 2%;
+      padding: 2% 3%;
       margin-left: -2px;
       margin-right: -2px;
     }
