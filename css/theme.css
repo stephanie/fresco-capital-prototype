@@ -6915,9 +6915,9 @@ ul.nav {
 
 .navbar {
   background-color: #27244A;
-  padding-left: 1.8%; }
+  padding-left: 2%; }
   .navbar ul.header-nav li {
-    padding: 1.8%;
+    padding: 2%;
     margin-left: -2px;
     margin-right: -2px; }
   .navbar ul.header-nav li:hover, .navbar ul.header-nav li.current-menu-item {
@@ -6961,6 +6961,24 @@ ul.nav {
   .page-container .row {
     max-width: 96%; }
 
+.box {
+  background: #fff;
+  border: 1px solid #E8E8E8;
+  -moz-box-shadow: 2px 2px 2px 0px rgba(215, 215, 215, 0.55);
+  box-shadow: 2px 2px 2px 0px rgba(215, 215, 215, 0.55);
+  margin-bottom: 1.875rem; }
+
+.page-header-container {
+  background-color: #686680;
+  padding: 2% 4%; }
+  .page-header-container h1 {
+    margin-top: 0;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem; }
+  .page-header-container p {
+    color: #fff;
+    margin-bottom: 1rem; }
+
 .home-slider-container {
   position: relative; }
   .home-slider-container .home-slider .slick-prev {
@@ -6985,25 +7003,25 @@ ul.nav {
     right: 25px;
     color: white; }
 
-.home-box {
-  background-color: #fff;
-  margin-bottom: 1.875rem; }
-  .home-box .home-box-header {
-    background-color: #686680;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 2%; }
-  .home-box .home-box-content {
-    padding: 5% 10%; }
-    .home-box .home-box-content p, .home-box .home-box-content h3 {
-      line-height: 1.2; }
-    .home-box .home-box-content h3 {
-      color: #27244A;
-      font-family: "Franklin Gothic Medium Italic", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 1.1em;
-      margin-bottom: 1.25rem; }
-    .home-box .home-box-content p.read-more {
-      margin-bottom: 0.5rem; }
+.home-box .home-box-header {
+  background-color: #686680;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2%; }
+.home-box .home-box-content {
+  padding: 5% 10%; }
+  .home-box .home-box-content p, .home-box .home-box-content h3 {
+    line-height: 1.2; }
+  .home-box .home-box-content h3 {
+    color: #27244A;
+    font-family: "Franklin Gothic Medium Italic", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 1.25rem; }
+  .home-box .home-box-content p.read-more {
+    margin-bottom: 0.5rem; }
+
+.companies-boxes {
+  margin-top: 1.875rem; }
 
 /*==========  Foundation Media Queries - copy/paste from here if needed  ==========*/
 @media only screen { }
