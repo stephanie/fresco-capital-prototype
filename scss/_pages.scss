@@ -1,6 +1,5 @@
 .page-container {
   background-color: $bg-color;
-  min-height: 100%;
   height: auto;
   .row {
     max-width: 96%;
@@ -86,4 +85,24 @@
 //our companies
 .companies-boxes {
   margin-top: 1.875rem;
+}
+.companies-filters {
+  .company-filter-header h3 {
+    color: $primary-color-light;
+    margin-top: 1.875rem;
+    border-bottom: 2px solid $primary-color-lighter;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  a {
+    display: block;
+    color: $primary-color-light;
+  }
+  a:hover {
+    color: $secondary-color;
+  }
+  a.selected-cat {
+    color: $secondary-color;
+    font-family: $body-font-medium;
+  }
 }
