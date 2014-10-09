@@ -1,0 +1,57 @@
+html {
+  font-size: $base-font-size;
+  margin-top: 0 !important;
+}
+
+body {
+  font-family: $body-font-family;
+  color: $body-font-color;
+  background-color: $body-bg;
+  font-weight: $font-weight-normal;
+  line-height: $base-line-height;
+  font-style: $body-font-style;
+}
+
+strong {
+  font-weight: $font-weight-normal;
+  font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Marat Medium", Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 2.375em; /* 38 / 16 */
+  text-transform: capitalize;
+}
+
+.page-header h1 {
+  color: $white;
+}
+
+.page-content h1 {
+  color: $primary-color-dark;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+a, a:hover {
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+$container-size: 1200px;
+
+.container {
+  max-width: $container-size;
+  margin: 0 auto;
+}
