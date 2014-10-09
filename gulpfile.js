@@ -9,7 +9,7 @@ var livereload = require('gulp-livereload');      // LiveReload
 //npm install gulp-minify-css gulp-sass gulp-concat gulp-uglify gulp-util gulp-livereload --save-dev
 
 var paths = {
-  javascript: ['js/*.js'],
+  javascript: ['js/theme-scripts.js'],
   theme: 'scss/theme.scss',
   watch: 'scss/**/*.scss'
 }

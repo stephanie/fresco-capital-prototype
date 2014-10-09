@@ -1,13 +1,7 @@
-// IS_MOBILE defined in footer.php
-// IS_TABLET defined in footer.php
-// SITE_URL defined in footer.php
+$(document).ready(function() {
+  
+  $('.home-slider').slick({
 
-// global variables
+  });
 
-jQuery(function($) {
-
-  $(document).ready(function($) {
-
-  });// Ready
-
-});// jQuery
+});// Ready
