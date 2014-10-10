@@ -45,6 +45,27 @@ $side_padding: 3%;
   float: left;
 }
 
+//sidebar
+.right-sidebar {
+  float: right !important;
+}
+.perspectives-sidebar {
+  background: $white;
+  padding: 25px;
+  h3.perspectives-sidebar-header {
+    font-family: $nav-font;
+    color: $primary-color-dark;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+  .perspectives-link {
+    margin-top: 5%;
+    .perspectives-link-title {
+      font-family: $body-font-medium;
+    }
+  }
+}
+
 //general slider styles
 .slider-container {
   position: relative;
@@ -107,7 +128,6 @@ $side_padding: 3%;
 .process-slider {
   margin-right: $side_padding;
   margin-left: $side_padding;
-  margin-top: $page_element_spacing;
 }
 .process-slider-header {
   font-size: 1.25em;

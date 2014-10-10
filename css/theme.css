@@ -6990,6 +6990,22 @@ ul.nav {
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
 
+.right-sidebar {
+  float: right !important; }
+
+.perspectives-sidebar {
+  background: #fff;
+  padding: 25px; }
+  .perspectives-sidebar h3.perspectives-sidebar-header {
+    font-family: "Open Sans Semibold", "Helvetica", Helvetica, Arial, sans-serif;
+    color: #27244A;
+    text-transform: uppercase;
+    margin-top: 0; }
+  .perspectives-sidebar .perspectives-link {
+    margin-top: 5%; }
+    .perspectives-sidebar .perspectives-link .perspectives-link-title {
+      font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
+
 .slider-container {
   position: relative; }
   .slider-container .slider .slick-prev {
@@ -7035,8 +7051,7 @@ ul.nav {
 
 .process-slider {
   margin-right: 3%;
-  margin-left: 3%;
-  margin-top: 1.875rem; }
+  margin-left: 3%; }
 
 .process-slider-header {
   font-size: 1.25em;
