@@ -7053,22 +7053,29 @@ ul.nav {
   right: 25px;
   color: white; }
 
-.home-box .home-box-header {
-  background-color: #686680;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 2%; }
-.home-box .home-box-content {
-  padding: 5% 10%; }
-  .home-box .home-box-content p, .home-box .home-box-content h3 {
-    line-height: 1.2; }
-  .home-box .home-box-content h3 {
-    color: #27244A;
-    font-family: "Franklin Gothic Medium Italic", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 1.1em;
-    margin-bottom: 1.25rem; }
-  .home-box .home-box-content p.read-more {
-    margin-bottom: 0.5rem; }
+.home-boxes {
+  margin-top: -1.875rem; }
+
+.home-box {
+  min-height: 19.6em; }
+  .home-box .home-box-header {
+    background-color: #686680;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2%; }
+  .home-box .home-box-content {
+    padding: 5% 10%; }
+    .home-box .home-box-content p, .home-box .home-box-content h3 {
+      line-height: 1.2; }
+    .home-box .home-box-content h3 {
+      color: #27244A;
+      font-family: "Franklin Gothic Medium Italic", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 1.1em;
+      margin-bottom: 1.25rem; }
+    .home-box .home-box-content p.read-more {
+      width: 100%;
+      font-size: 0.91em;
+      margin-bottom: 0.5rem; }
 
 .process-slider {
   margin-right: 3%;

@@ -129,7 +129,11 @@ $box_padding: 25px;
   right: $box_padding;
   color: white;
 }
+.home-boxes {
+  margin-top: -$page_element_spacing;
+}
 .home-box {
+  min-height: 19.6em;
   .home-box-header {
     background-color: $primary-color-light;
     text-transform: uppercase;
@@ -148,6 +152,8 @@ $box_padding: 25px;
       margin-bottom: 1.25rem;
     }
     p.read-more {
+      width: 100%;
+      font-size: 0.91em;
       margin-bottom: 0.5rem;
     }
   }
