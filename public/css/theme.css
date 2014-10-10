@@ -7093,6 +7093,24 @@ ul.nav {
   margin-top: -40px;
   text-align: center; }
 
+.values-container {
+  margin-top: 1.875rem; }
+
+.value-box {
+  margin-top: 0;
+  margin-bottom: 0.9375rem;
+  min-height: 4.5em; }
+  .value-box .value-header {
+    float: left;
+    background-color: #686680;
+    padding: 25px;
+    margin-right: 25px; }
+    .value-box .value-header h3 {
+      margin: 0;
+      text-transform: uppercase; }
+  .value-box .value-desc {
+    padding: 29px; }
+
 .companies-filters .company-filter-header h3 {
   color: #686680;
   margin-top: 1.875rem;

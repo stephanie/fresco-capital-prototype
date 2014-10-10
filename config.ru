@@ -10,7 +10,7 @@ Rack::Mime::MIME_TYPES.merge!({
   ".woff" => "application/x-font-woff"
 })
 
-map "/" do
+map "/index.html" do
   run lambda { |env|
     [
       200,

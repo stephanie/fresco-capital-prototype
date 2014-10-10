@@ -176,7 +176,27 @@ $box_padding: 25px;
   margin-top: -40px;
   text-align: center;
 }
-
+.values-container {
+  margin-top: $page_element_spacing;
+}
+.value-box {
+  margin-top: 0;
+  margin-bottom: $page_element_spacing / 2;
+  min-height: 4.5em;
+  .value-header {
+    float: left;
+    background-color: $primary-color-light;
+    padding: $box_padding;
+    margin-right: $box_padding;
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+  .value-desc {
+    padding: 29px;
+  }
+}
 //our companies
 .companies-filters {
   .company-filter-header h3 {
