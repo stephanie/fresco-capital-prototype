@@ -31,10 +31,18 @@ function alignBoxHeight(element) {
 
 $(document).ready(function() {
 
+  //slick carousel functions
   $('.home-slider').slick({
   });
-  
   $('.process-slider').slick({
+  });
+  $(".process-slider-nav .nav li").click(function(e){
+    e.preventDefault();
+    $(".process-slider-nav .nav li").removeClass('selected');
+
+    slideIndex = $(this).index();
+    $( '.process-slider' ).slickGoTo( parseInt(slideIndex) );
+    $(this).addClass('selected');
   });
 
   setBoxHeight($company_box, 1.667);
