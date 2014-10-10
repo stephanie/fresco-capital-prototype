@@ -7085,6 +7085,8 @@ ul.nav {
   .process-slider-nav li.selected {
     margin-bottom: 0;
     border-bottom: 5px solid #E46C0A; }
+    .process-slider-nav li.selected a h3 {
+      color: #E46C0A; }
   .process-slider-nav li a h3 {
     text-transform: uppercase;
     color: #27244A; }

@@ -165,6 +165,9 @@
     &.selected {
       margin-bottom: 0;
       border-bottom: 5px solid $secondary-color;
+      a h3 {
+        color: $secondary-color;
+      }
     }
     a h3 {
       text-transform: uppercase;
