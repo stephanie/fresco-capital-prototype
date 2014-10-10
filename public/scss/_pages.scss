@@ -160,6 +160,25 @@ $box_padding: 25px;
 }
 
 //what we do
+.process-slider-nav {
+  li {
+    margin-right: $box_padding;
+    padding: $box_padding;
+    padding-bottom: $box_padding - 5;
+    margin-bottom: 5px;
+    &.selected {
+      margin-bottom: 0;
+      border-bottom: 5px solid $secondary-color;
+    }
+    a h3 {
+      text-transform: uppercase;
+      color: $primary-color-dark;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
 .process-slider {
   margin-right: $side_padding;
   margin-left: $side_padding;
