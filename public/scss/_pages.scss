@@ -11,6 +11,11 @@
   box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
   margin-top: $page_element_spacing;
 }
+.box-no-shadow {
+  margin-top: $page_element_spacing;
+  background: $white;
+  padding: $box_padding;
+}
 .page-header-container {
   background-color: $primary-color-light;
   padding: 2% $side_padding;
@@ -53,13 +58,13 @@
 }
 
 //content & sidebars layout
-.content-sidebar-layout {
-  .main-content-box, .perspectives-sidebar {
-    margin-top: $page_element_spacing;
-    background: $white;
-    padding: $box_padding;
-  }
-}
+// .content-sidebar-layout {
+//   .main-content-box, .perspectives-sidebar {
+//     margin-top: $page_element_spacing;
+//     background: $white;
+//     padding: $box_padding;
+//   }
+// }
 .main-content-box {
   h1, h2, h3, h4, h5 {
     color: $primary-color-dark;
@@ -90,7 +95,32 @@
     }
   }
 }
-
+.author-sidebar {
+  .author-img-container {
+    min-height: 100px;
+    margin-bottom: $box_padding;
+    .author-img {
+      width: 100px;
+      height: 100px;
+      background-image: url('../images/allison.png');
+      background-size: cover;
+      display: block;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      float: left;
+      margin-right: $box_padding;
+      margin-bottom: $box_padding;
+    }
+    .author-info {
+      padding-top: $box_padding;
+      font-family: $body-font-medium;
+    }
+  }
+  .author-desc {
+    font-size: 0.9em;
+  }
+}
 //general slider styles
 .slider-container {
   position: relative;

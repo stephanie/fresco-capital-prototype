@@ -6968,6 +6968,11 @@ ul.nav {
   box-shadow: 2px 2px 2px 0px rgba(215, 215, 215, 0.55);
   margin-top: 1.875rem; }
 
+.box-no-shadow {
+  margin-top: 1.875rem;
+  background: #fff;
+  padding: 25px; }
+
 .page-header-container {
   background-color: #686680;
   padding: 2% 3%; }
@@ -7002,11 +7007,6 @@ ul.nav {
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
 
-.content-sidebar-layout .main-content-box, .content-sidebar-layout .perspectives-sidebar {
-  margin-top: 1.875rem;
-  background: #fff;
-  padding: 25px; }
-
 .main-content-box h1, .main-content-box h2, .main-content-box h3, .main-content-box h4, .main-content-box h5 {
   color: #27244A; }
 
@@ -7026,6 +7026,27 @@ ul.nav {
   margin-top: 1rem; }
   .perspectives-sidebar .perspectives-links-container .perspective-link .perspective-link-title {
     font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
+
+.author-sidebar .author-img-container {
+  min-height: 100px;
+  margin-bottom: 25px; }
+  .author-sidebar .author-img-container .author-img {
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/allison.png');
+    background-size: cover;
+    display: block;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px; }
+  .author-sidebar .author-img-container .author-info {
+    padding-top: 25px;
+    font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
+.author-sidebar .author-desc {
+  font-size: 0.9em; }
 
 .slider-container {
   position: relative; }
