@@ -6868,7 +6868,8 @@ strong {
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.5rem; }
+  margin-top: 0.5rem;
+  line-height: 120%; }
 
 h1, h2, h3 {
   font-family: "Marat Medium", Georgia, "Times New Roman", serif; }
@@ -6902,7 +6903,8 @@ a, a:hover {
 
 ul.nav {
   margin: 0;
-  list-style: none; }
+  list-style: none;
+  padding-bottom: 1px; }
   ul.nav li {
     display: inline-block; }
 
@@ -6984,27 +6986,46 @@ ul.nav {
   color: #27244A;
   padding-left: 3%; }
 
+.italic-text {
+  font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif; }
+
+.breadcrumb, .breadcrumb a {
+  color: #686680;
+  font-size: 0.93em; }
+
+.breadcrumb a:hover {
+  color: #E46C0A; }
+
 .page-container .row {
   max-width: 96%; }
 
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
 
+.content-sidebar-layout .main-content-box, .content-sidebar-layout .perspectives-sidebar {
+  margin-top: 1.875rem;
+  background: #fff;
+  padding: 25px; }
+
+.main-content-box h1, .main-content-box h2, .main-content-box h3, .main-content-box h4, .main-content-box h5 {
+  color: #27244A; }
+
 .right-sidebar {
   float: right !important; }
 
-.perspectives-sidebar {
-  background: #fff;
-  padding: 25px; }
-  .perspectives-sidebar h3.perspectives-sidebar-header {
-    font-family: "Open Sans Semibold", "Helvetica", Helvetica, Arial, sans-serif;
-    color: #27244A;
-    text-transform: uppercase;
-    margin-top: 0; }
-  .perspectives-sidebar .perspectives-link {
-    margin-top: 5%; }
-    .perspectives-sidebar .perspectives-link .perspectives-link-title {
-      font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
+.perspectives-sidebar h3.perspectives-sidebar-header {
+  font-family: "Open Sans Semibold", "Helvetica", Helvetica, Arial, sans-serif;
+  color: #27244A;
+  text-transform: uppercase;
+  margin-top: 0; }
+.perspectives-sidebar .perspectives-links-container a {
+  color: inherit; }
+  .perspectives-sidebar .perspectives-links-container a:hover {
+    color: #E46C0A; }
+.perspectives-sidebar .perspectives-links-container .perspective-link {
+  margin-top: 1rem; }
+  .perspectives-sidebar .perspectives-links-container .perspective-link .perspective-link-title {
+    font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .slider-container {
   position: relative; }

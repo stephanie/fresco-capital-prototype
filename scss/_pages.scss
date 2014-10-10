@@ -1,5 +1,6 @@
 $page_element_spacing: 1.875rem;
 $side_padding: 3%;
+$box_padding: 25px;
 
 .page-container {
   background-color: $bg-color;
@@ -36,6 +37,16 @@ $side_padding: 3%;
     padding-left: $side_padding;
   }
 }
+.italic-text {
+  font-family: $body-font-italic;
+}
+.breadcrumb, .breadcrumb a {
+  color: $primary-color-light;
+  font-size: 0.93em;
+}
+.breadcrumb a:hover {
+  color: $secondary-color;
+}
 
 //adjusting foundation grid elements
 .page-container .row {
@@ -45,23 +56,41 @@ $side_padding: 3%;
   float: left;
 }
 
-//sidebar
+//content & sidebars layout
+.content-sidebar-layout {
+  .main-content-box, .perspectives-sidebar {
+    margin-top: $page_element_spacing;
+    background: $white;
+    padding: $box_padding;
+  }
+}
+.main-content-box {
+  h1, h2, h3, h4, h5 {
+    color: $primary-color-dark;
+  }
+}
 .right-sidebar {
   float: right !important;
 }
 .perspectives-sidebar {
-  background: $white;
-  padding: 25px;
   h3.perspectives-sidebar-header {
     font-family: $nav-font;
     color: $primary-color-dark;
     text-transform: uppercase;
     margin-top: 0;
   }
-  .perspectives-link {
-    margin-top: 5%;
-    .perspectives-link-title {
-      font-family: $body-font-medium;
+  .perspectives-links-container {
+    a {
+      color: inherit;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    .perspective-link {
+      margin-top: 1rem;
+      .perspective-link-title {
+        font-family: $body-font-medium;
+      }
     }
   }
 }
@@ -71,10 +100,10 @@ $side_padding: 3%;
   position: relative;
   .slider {
     .slick-prev {
-      left: 25px;
+      left: $box_padding;
     }
     .slick-next {
-      right: 25px;
+      right: $box_padding;
     }
   }
 }
@@ -96,8 +125,8 @@ $side_padding: 3%;
 }
 .home-slider-subheader {
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  bottom: $box_padding;
+  right: $box_padding;
   color: white;
 }
 .home-box {
@@ -170,13 +199,13 @@ $side_padding: 3%;
   .member-box-img {
     img {
       float: left;
-      margin: 25px;
+      margin: $box_padding;
       width: 222px;
       height: 222px;
     }
   }
   .member-box-content {
-    margin: 25px;
+    margin: $box_padding;
     padding-bottom: 35px;
   }
   h3.member-name {
@@ -194,7 +223,7 @@ $side_padding: 3%;
   .read-more {
     margin-bottom: 0;
     position: absolute;
-    bottom: 25px;
+    bottom: $box_padding;
     right: 45px;
     width: 100%;
   }
