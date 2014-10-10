@@ -1,21 +1,22 @@
+$page_element_spacing: 1.875rem;
+$side_padding: 3%;
+
 .page-container {
   background-color: $bg-color;
   height: auto;
-  padding-bottom: 1.875rem;
-  .row {
-    max-width: 96%;
-  }
+  padding-bottom: $page_element_spacing;
 }
+
 .box {
   background: $white;
   border: 1px solid #E8E8E8;
   -moz-box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
   box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
-  margin-top: 1.875rem;
+  margin-top: $page_element_spacing;
 }
 .page-header-container {
   background-color: $primary-color-light;
-  padding: 2% 3%;
+  padding: 2% $side_padding;
   h1 {
     margin-top: 0;
     padding-top: 0.5rem;
@@ -26,11 +27,28 @@
     margin-bottom: 1rem;
   }
 }
+.page-content-header {
+  h2 {
+    margin-top: $page_element_spacing;
+    margin-bottom: 0;
+    font-size: 2.375em;
+    color: $primary-color-dark;
+    padding-left: $side_padding;
+  }
+}
 
-//homepage
-.home-slider-container {
+//adjusting foundation grid elements
+.page-container .row {
+    max-width: 96%;
+}
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+//general slider styles
+.slider-container {
   position: relative;
-  .home-slider {
+  .slider {
     .slick-prev {
       left: 25px;
     }
@@ -38,26 +56,28 @@
       right: 25px;
     }
   }
-  .home-slider-header {
-    position: absolute;
-    top: 50%;
-    left: 80px;
-    width: 55%;
-    height: 16%;
-    margin-top: -8%;
-    text-shadow: 0px 2px 4px $primary-color-dark;
-    h2 {
-      font-size: 2.3em;
-      font-size: 2.9vw;
-      line-height: 1.15;
-    }
+}
+
+//homepage
+.home-slider-header {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  width: 55%;
+  height: 16%;
+  margin-top: -8%;
+  text-shadow: 0px 2px 4px $primary-color-dark;
+  h2 {
+    font-size: 2.3em;
+    font-size: 2.9vw;
+    line-height: 1.15;
   }
-  .home-slider-subheader {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    color: white;
-  }
+}
+.home-slider-subheader {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  color: white;
 }
 .home-box {
   .home-box-header {
@@ -83,11 +103,30 @@
   }
 }
 
+//what we do
+.process-slider {
+  margin-right: $side_padding;
+  margin-left: $side_padding;
+  margin-top: $page_element_spacing;
+}
+.process-slider-header {
+  font-size: 1.25em;
+  line-height: 130%;
+  color: $primary-color-dark;
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  right: 20%;
+  height: 80px;
+  margin-top: -40px;
+  text-align: center;
+}
+
 //our companies
 .companies-filters {
   .company-filter-header h3 {
     color: $primary-color-light;
-    margin-top: 1.875rem;
+    margin-top: $page_element_spacing;
     border-bottom: 2px solid $primary-color-lighter;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -102,5 +141,41 @@
   a.selected-cat {
     color: $secondary-color;
     font-family: $body-font-medium;
+  }
+}
+
+//who we are
+.team-member-box {
+  min-height: 17.2em;
+  .member-box-img {
+    img {
+      float: left;
+      margin: 25px;
+      width: 222px;
+      height: 222px;
+    }
+  }
+  .member-box-content {
+    margin: 25px;
+    padding-bottom: 35px;
+  }
+  h3.member-name {
+    text-transform: uppercase;
+    color: $primary-color-dark;
+    margin: 0;
+  }
+  .member-title {
+    font-family: $body-font-italic;
+  }
+  .member-excerpt {
+    font-size: 0.9em;
+    line-height: 120%;
+  }
+  .read-more {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 25px;
+    right: 45px;
+    width: 100%;
   }
 }
