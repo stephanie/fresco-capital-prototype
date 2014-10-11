@@ -50,6 +50,19 @@ map "/our-team.html" do
 }
 end
 
+map "/our-team-detailed-page.html" do
+  run lambda { |env|
+  [
+    200, 
+    {
+      'Content-Type'  => 'text/html', 
+      'Cache-Control' => 'public, max-age=86400' 
+    },
+    File.open('public/our-team-detailed-page.html', File::RDONLY)
+  ]
+}
+end
+
 map "/our-companies.html" do
   run lambda { |env|
   [
@@ -59,19 +72,6 @@ map "/our-companies.html" do
       'Cache-Control' => 'public, max-age=86400' 
     },
     File.open('public/our-companies.html', File::RDONLY)
-  ]
-}
-end
-
-map "/our-companies-detailed-page.html" do
-  run lambda { |env|
-  [
-    200, 
-    {
-      'Content-Type'  => 'text/html', 
-      'Cache-Control' => 'public, max-age=86400' 
-    },
-    File.open('public/our-companies-detailed-page.html', File::RDONLY)
   ]
 }
 end
