@@ -60,7 +60,6 @@ ul.nav {
     li {
       margin-right: 4%;
       a {
-        color: $primary-color-dark;
         font-size: $footer-font-size;
       }
       @media (max-width: $container-size) {
@@ -69,6 +68,7 @@ ul.nav {
     }
   }
   .copyright {
+    margin-top: 3px;
     @media (max-width: $container-size) {
       margin-right: 4%;
       margin-left: 4%;

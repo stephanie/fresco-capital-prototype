@@ -48,10 +48,14 @@
 .breadcrumb a:hover {
   color: $secondary-color;
 }
-
+.read-more a {
+  color: $secondary-color;
+}
 //adjusting foundation grid elements
 .page-container .row {
-    max-width: 96%;
+  max-width: 100%;
+  padding-left: $page_element_spacing / 2;
+  padding-right: $page_element_spacing / 2;
 }
 [class*="column"] + [class*="column"]:last-child {
   float: left;
@@ -73,20 +77,14 @@
 .right-sidebar {
   float: right !important;
 }
+h3.sidebar-header {
+  font-family: $nav-font;
+  color: $primary-color-light;
+  text-transform: uppercase;
+  margin-top: 0;
+}
 .perspectives-sidebar {
-  h3.perspectives-sidebar-header {
-    font-family: $nav-font;
-    color: $primary-color-dark;
-    text-transform: uppercase;
-    margin-top: 0;
-  }
   .perspectives-links-container {
-    a {
-      color: inherit;
-      &:hover {
-        color: $secondary-color;
-      }
-    }
     .perspective-link {
       margin-top: 1rem;
       .perspective-link-title {
@@ -115,12 +113,26 @@
     .author-info {
       padding-top: $box_padding;
       font-family: $body-font-medium;
+      color: $primary-color-dark;
     }
   }
   .author-desc {
     font-size: 0.9em;
   }
 }
+.members-sidebar {
+  a {
+    display: block;
+    line-height: 165%;
+    &.selected {
+      color: $secondary-color;
+    }
+    &.selected {
+      font-family: $body-font-medium;
+    }
+  }
+}
+
 //general slider styles
 .slider-container {
   position: relative;
@@ -256,10 +268,6 @@
   }
   a {
     display: block;
-    color: $primary-color-light;
-  }
-  a:hover {
-    color: $secondary-color;
   }
   a.selected-cat {
     color: $secondary-color;
@@ -305,12 +313,13 @@
 
 //who we are detailed page
 .detailed-member-top {
-  margin-top: 1rem;
+  margin-top: $box_padding / 2;
   min-height: 222px;
   line-height: 150%;
   img {
     float: left;
-    margin-right: $page_element_spacing;
+    margin-right: $box_padding;
+    margin-bottom: $box_padding;
   }
   h1 {
     color: $primary-color-dark;
@@ -323,16 +332,10 @@
   span, a {
     display: block;
   }
-  a {
-    color: inherit;
-    &:hover {
-      color: $secondary-color;
-    }
-  }
   .interest-areas {
     margin-top: $page_element_spacing / 2;
   }
 }
 .detailed-member-desc {
-  margin-top: $page_element_spacing;
+  margin-top: $box_padding;
 }

@@ -47,11 +47,14 @@ h3 {
   font-size: 1.5em;
 }
 
-a, a:hover {
+a {
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
-  color: $secondary-color;
+  color: inherit;
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 $container-size: 1200px;

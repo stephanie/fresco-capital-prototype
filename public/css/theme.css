@@ -6898,11 +6898,13 @@ h2 {
 h3 {
   font-size: 1.5em; }
 
-a, a:hover {
+a {
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
-  color: #E46C0A; }
+  color: inherit; }
+  a:hover {
+    color: #E46C0A; }
 
 .container {
   max-width: 1200px;
@@ -6953,15 +6955,16 @@ ul.nav {
   .footer .footer-nav li {
     margin-right: 4%; }
     .footer .footer-nav li a {
-      color: #27244A;
       font-size: 0.9em; }
     @media (max-width: 1200px) {
       .footer .footer-nav li {
         margin-left: 4%; } }
-  @media (max-width: 1200px) {
-    .footer .copyright {
-      margin-right: 4%;
-      margin-left: 4%; } }
+  .footer .copyright {
+    margin-top: 3px; }
+    @media (max-width: 1200px) {
+      .footer .copyright {
+        margin-right: 4%;
+        margin-left: 4%; } }
 
 .page-container {
   background-color: #F5F5F6;
@@ -7008,8 +7011,13 @@ ul.nav {
 .breadcrumb a:hover {
   color: #E46C0A; }
 
+.read-more a {
+  color: #E46C0A; }
+
 .page-container .row {
-  max-width: 96%; }
+  max-width: 100%;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
 
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
@@ -7020,15 +7028,12 @@ ul.nav {
 .right-sidebar {
   float: right !important; }
 
-.perspectives-sidebar h3.perspectives-sidebar-header {
+h3.sidebar-header {
   font-family: "Open Sans Semibold", "Helvetica", Helvetica, Arial, sans-serif;
-  color: #27244A;
+  color: #686680;
   text-transform: uppercase;
   margin-top: 0; }
-.perspectives-sidebar .perspectives-links-container a {
-  color: inherit; }
-  .perspectives-sidebar .perspectives-links-container a:hover {
-    color: #E46C0A; }
+
 .perspectives-sidebar .perspectives-links-container .perspective-link {
   margin-top: 1rem; }
   .perspectives-sidebar .perspectives-links-container .perspective-link .perspective-link-title {
@@ -7051,9 +7056,18 @@ ul.nav {
     margin-bottom: 25px; }
   .author-sidebar .author-img-container .author-info {
     padding-top: 25px;
-    font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
+    font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif;
+    color: #27244A; }
 .author-sidebar .author-desc {
   font-size: 0.9em; }
+
+.members-sidebar a {
+  display: block;
+  line-height: 165%; }
+  .members-sidebar a.selected {
+    color: #E46C0A; }
+  .members-sidebar a.selected {
+    font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .slider-container {
   position: relative; }
@@ -7162,10 +7176,7 @@ ul.nav {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem; }
 .companies-filters a {
-  display: block;
-  color: #686680; }
-.companies-filters a:hover {
-  color: #E46C0A; }
+  display: block; }
 .companies-filters a.selected-cat {
   color: #E46C0A;
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
@@ -7197,12 +7208,13 @@ ul.nav {
     width: 100%; }
 
 .detailed-member-top {
-  margin-top: 1rem;
+  margin-top: 12.5px;
   min-height: 222px;
   line-height: 150%; }
   .detailed-member-top img {
     float: left;
-    margin-right: 1.875rem; }
+    margin-right: 25px;
+    margin-bottom: 25px; }
   .detailed-member-top h1 {
     color: #27244A;
     margin: 0; }
@@ -7211,15 +7223,11 @@ ul.nav {
     margin-bottom: 0.9375rem; }
   .detailed-member-top span, .detailed-member-top a {
     display: block; }
-  .detailed-member-top a {
-    color: inherit; }
-    .detailed-member-top a:hover {
-      color: #E46C0A; }
   .detailed-member-top .interest-areas {
     margin-top: 0.9375rem; }
 
 .detailed-member-desc {
-  margin-top: 1.875rem; }
+  margin-top: 25px; }
 
 /*==========  Foundation Media Queries - copy/paste from here if needed  ==========*/
 @media only screen { }
