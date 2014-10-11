@@ -5208,6 +5208,13 @@ th.hide-for-touch {
 Import Fonts & Font Awesome
 =================================================================*/
 @font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Marat Regular';
   src: url('../fonts/Marat-Regular.eot');
   src: url('../fonts/Marat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Marat-Regular.woff') format('woff'), url('../fonts/Marat-Regular.ttf') format('truetype'), url('../fonts/Marat-Regular.svg#Marat-Regular') format('svg');
@@ -7188,6 +7195,31 @@ ul.nav {
     bottom: 25px;
     right: 45px;
     width: 100%; }
+
+.detailed-member-top {
+  margin-top: 1rem;
+  min-height: 222px;
+  line-height: 150%; }
+  .detailed-member-top img {
+    float: left;
+    margin-right: 1.875rem; }
+  .detailed-member-top h1 {
+    color: #27244A;
+    margin: 0; }
+  .detailed-member-top .detailed-member-title {
+    font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif;
+    margin-bottom: 0.9375rem; }
+  .detailed-member-top span, .detailed-member-top a {
+    display: block; }
+  .detailed-member-top a {
+    color: inherit; }
+    .detailed-member-top a:hover {
+      color: #E46C0A; }
+  .detailed-member-top .interest-areas {
+    margin-top: 0.9375rem; }
+
+.detailed-member-desc {
+  margin-top: 1.875rem; }
 
 /*==========  Foundation Media Queries - copy/paste from here if needed  ==========*/
 @media only screen { }

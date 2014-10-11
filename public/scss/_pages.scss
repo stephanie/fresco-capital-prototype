@@ -302,3 +302,37 @@
     width: 100%;
   }
 }
+
+//who we are detailed page
+.detailed-member-top {
+  margin-top: 1rem;
+  min-height: 222px;
+  line-height: 150%;
+  img {
+    float: left;
+    margin-right: $page_element_spacing;
+  }
+  h1 {
+    color: $primary-color-dark;
+    margin: 0;
+  }
+  .detailed-member-title {
+    font-family: $body-font-italic;
+    margin-bottom: $page_element_spacing / 2;
+  }
+  span, a {
+    display: block;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .interest-areas {
+    margin-top: $page_element_spacing / 2;
+  }
+}
+.detailed-member-desc {
+  margin-top: $page_element_spacing;
+}
