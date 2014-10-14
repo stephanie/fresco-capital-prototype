@@ -385,19 +385,28 @@ h3.sidebar-header {
     font-family: $body-font-medium;
   }
 }
+// .company-box {
+//   display: table-cell;
+//   text-align: center;
+//   vertical-align: middle;
+//   * {
+//     vertical-align: middle;
+//   }
+//   display: block;
+//   span {
+//     display: inline-block;
+//     height: 100%;
+//     width: 1px;
+//   }
+// }
+
 .company-box {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  * {
-    vertical-align: middle;
-  }
-  display: block;
-  span {
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-  }
+  position: absolute;
+  background-image: url(../images/edpuzzle_logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  right: 0;
+  width: 100%;
 }
 
 //who we are

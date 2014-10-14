@@ -7346,16 +7346,12 @@ h3.sidebar-header {
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .company-box {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  display: block; }
-  .company-box * {
-    vertical-align: middle; }
-  .company-box span {
-    display: inline-block;
-    height: 100%;
-    width: 1px; }
+  position: absolute;
+  background-image: url(../images/edpuzzle_logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  right: 0;
+  width: 100%; }
 
 .bio-box {
   min-height: 17.2em; }

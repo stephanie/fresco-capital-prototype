@@ -1,5 +1,5 @@
 //to maintain business card dimensions
-var $company_box = $('.company-box');
+var $company_box = $('.company-box, .company-box-container');
 var $perspective_box = $('.perspective-box');
 var $home_box = $('.home-box');
 var $member_box = $('.team-member-box');
