@@ -25,7 +25,6 @@ ul.nav {
   @media #{$small-only} { 
     padding-top: 8%;
     padding-bottom: 8%;
-    margin-top: -2px;
   }
   img {
     width: 29%;
@@ -41,7 +40,7 @@ ul.nav {
   ul.header-nav {
     li {
       padding: 2% $side_padding;
-      margin: 0 -2px -2px -2px;
+      margin: 0 -2px;
       @media #{$small-only} { 
         display: none;
       }
@@ -52,16 +51,42 @@ ul.nav {
     li.current-menu-item {
       @media #{$small-only} { 
         display: inline-block;
-        padding: 3% $side_padding;
+        padding: 4% 6% 4% $small_side_padding;
       }
     }
   }
 }
-.mobile-menu {
+
+//mobile
+a.mobile-menu-link {
   color: $primary-color-dark;
   text-align: right;
   margin-right: $side_padding;
-  margin-top: 2px;
+  @media #{$small-only} { 
+    margin-right: $small_side_padding;
+  }
+}
+.mobile-menu {
+  position: absolute;
+  background: $primary-color-dark;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  overflow-y: hidden;
+  max-height: 300px; /* approximate max height */
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(1);
+  ul.nav li {
+    padding: $small_box_padding;
+    display: block;
+    &.current-menu-item {
+      background: $primary-color-light;
+    }
+  }
+}
+.mobile-menu.closed {
+  max-height: 0;
 }
 
 //footer
@@ -69,6 +94,10 @@ ul.nav {
   padding-top: 2%;
   padding-bottom: 2%;
   font-size: $footer-font-size;
+  @media #{$small-only} { 
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
   .row {
     max-width: none;
   }
@@ -80,9 +109,14 @@ ul.nav {
       margin-right: 4%;
       a {
         font-size: $footer-font-size;
+        color: $primary-color-dark;
       }
       @media (max-width: $container-size) {
         margin-left: 4%;
+      }
+      @media #{$small-only} { 
+        margin-left: 2%;
+        margin-right: 2%;
       }
     }
   }

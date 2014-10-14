@@ -2,6 +2,9 @@
   background-color: $bg-color;
   height: auto;
   padding-bottom: $page_element_spacing;
+  @media #{$small-only} {
+    padding-bottom: $small_page_element_spacing;
+  }
 }
 
 .box {
@@ -10,15 +13,27 @@
   -moz-box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
   box-shadow: 2px 2px 2px 0px rgba(215,215,215,0.55);
   margin-top: $page_element_spacing;
+  @media #{$small-only} {
+    margin-top: $small_page_element_spacing;
+  }
+
 }
 .box-no-shadow {
   margin-top: $page_element_spacing;
   background: $white;
   padding: $box_padding;
+  @media #{$small-only} {
+    margin-top: $small_page_element_spacing;
+    padding: $small_box_padding;
+  }
 }
 .page-header-container {
   background-color: $primary-color-light;
   padding: 2% $side_padding;
+  margin-top: -2px;
+  @media #{$small-only} {
+    padding: 2% $small_side_padding;
+  }
   h1 {
     margin-top: 0;
     padding-top: 0.5rem;
@@ -33,9 +48,12 @@
   h2 {
     margin-top: $page_element_spacing;
     margin-bottom: 0;
-    font-size: 200%;
     color: $primary-color-dark;
-    padding-left: $side_padding;
+    padding-left: $page_element_spacing;
+    @media #{$small-only} {
+      margin-top: $small_page_element_spacing;
+      padding-left: $small_page_element_spacing;
+    }
   }
 }
 .italic-text {
@@ -43,7 +61,7 @@
 }
 .breadcrumb, .breadcrumb a {
   color: $primary-color-light;
-  font-size: 95%;
+  font-size: 90%;
 }
 .breadcrumb a:hover {
   color: $secondary-color;
@@ -56,6 +74,10 @@
   max-width: 100%;
   padding-left: $page_element_spacing / 2;
   padding-right: $page_element_spacing / 2;
+  @media #{$small-only} {
+    padding-left: $small_page_element_spacing / 2;
+    padding-right: $small_page_element_spacing / 2;
+  }
 }
 [class*="column"] + [class*="column"]:last-child {
   float: left;
@@ -97,6 +119,9 @@ h3.sidebar-header {
   .author-img-container {
     min-height: 100px;
     margin-bottom: $box_padding;
+    @media #{$small-only} {
+      margin-bottom: $small_box_padding;
+    }
     .author-img {
       width: 100px;
       height: 100px;
@@ -109,11 +134,18 @@ h3.sidebar-header {
       float: left;
       margin-right: $box_padding;
       margin-bottom: $box_padding;
+      @media #{$small-only} {
+        margin-right: $small_box_padding;
+        margin-bottom: $small_box_padding;
+      }
     }
     .author-info {
       padding-top: $box_padding;
       font-family: $body-font-medium;
       color: $primary-color-dark;
+      @media #{$small-only} {
+        padding-top: $small_box_padding;
+      }
     }
   }
   .author-desc {
@@ -139,9 +171,15 @@ h3.sidebar-header {
   .slider {
     .slick-prev {
       left: $box_padding;
+      @media #{$small-only} {
+        display: none !important;
+      }
     }
     .slick-next {
       right: $box_padding;
+      @media #{$small-only} {
+        display: none !important;
+      }
     }
     img {
       max-width: none;
@@ -150,28 +188,43 @@ h3.sidebar-header {
 }
 
 //homepage
+.home {
+  .navbar {
+    @media #{$small-only} {
+      display: none;
+    }
+  }
+}
 .home-slider-header {
   position: absolute;
   top: 50%;
   left: 80px;
-  width: 50%;
+  width: 53%;
   height: 14%;
-  margin-top: -7%;
+  margin-top: -7.5%;
   text-shadow: 0px 2px 4px $primary-color-dark;
+  pointer-events: none;
   @media #{$medium-only} { 
     width: 57%;
   }
   @media #{$small-only} {
-    bottom: 230px;
-    top: auto;
+    top: 50%;
     width: 90%;
     left: 0;
     right: 0;
     margin: 0 auto;
+    height: 200px;
+    margin-top: -100px;
   }
   h1, h2 {
     font-size: 250%;
     line-height: 1.15;
+    @media #{$medium-only} { 
+      font-size: 230%;
+    }
+    @media #{$small-only} {
+      font-size: 190%;
+    }
   }
 }
 .home-slider-subheader {
@@ -179,9 +232,16 @@ h3.sidebar-header {
   bottom: $box_padding;
   right: $box_padding;
   color: white;
+  @media #{$small-only} {
+    bottom: $small_box_padding;
+    right: $small_box_padding;
+  }
 }
 .home-boxes {
   margin-top: -$page_element_spacing;
+  @media #{$small-only} {
+    margin-top: -$small_page_element_spacing;
+  }
 }
 .home-box {
   min-height: 19.6em;
@@ -192,7 +252,7 @@ h3.sidebar-header {
     padding: 2%;
   }
   .home-box-content {
-    padding: 5% 10%;
+    padding: 3% $box_padding;
     p, h3 {
       line-height: 135%;
     }
@@ -219,6 +279,8 @@ h3.sidebar-header {
     margin-bottom: 5px;
     @media #{$small-only} { 
       margin-right: 0;
+      padding: $small_box_padding;
+      padding-bottom: $small_box_padding - 5;
     }
     &.selected {
       margin-bottom: 0;
@@ -237,8 +299,11 @@ h3.sidebar-header {
   }
 }
 .process-slider {
-  margin-right: $side_padding;
-  margin-left: $side_padding;
+  margin-right: $page_element_spacing;
+  margin-left: $page_element_spacing;
+  @media #{$small-only} { 
+    margin: 0;
+  }
 }
 .process-slider-header {
   font-size: 120%;
@@ -259,6 +324,10 @@ h3.sidebar-header {
 }
 .values-container {
   margin-top: $page_element_spacing;
+  @media #{$small-only} { 
+    margin-top: $small_page_element_spacing;
+    margin-bottom: -$small_page_element_spacing;
+  }
 }
 .value-box {
   margin-top: 0;
@@ -267,12 +336,18 @@ h3.sidebar-header {
     padding: 0;
     margin: 0;
     margin-bottom: $page_element_spacing / 2;
+    @media #{$small-only} { 
+      margin-bottom: $small_page_element_spacing;
+    }
   }
   .value-header {
     float: left;
     background-color: $primary-color-light;
     padding: $box_padding;
     text-align: center;
+    @media #{$small-only} { 
+      padding: $small_box_padding / 1.6;
+    }
     h3 {
       margin: 0;
       text-transform: uppercase;
@@ -298,6 +373,9 @@ h3.sidebar-header {
     border-bottom: 2px solid $primary-color-lighter;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    @media #{$small-only} { 
+      margin-top: $small_page_element_spacing;
+    }
   }
   a {
     display: block;
@@ -317,12 +395,24 @@ h3.sidebar-header {
       margin: $box_padding;
       width: 222px;
       height: 222px;
+      @media #{$small-only} { 
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: $small_box_padding;
+      }
     }
   }
   .bio-box-content {
     margin: $box_padding;
+    @media #{$small-only} { 
+      margin: $small_box_padding;
+    }
     .bio-box-top {
-      margin-bottom: $box_padding;
+      margin-bottom: $box_padding / 2;
+      @media #{$small-only} { 
+        margin-bottom: $small_box_padding / 2;
+      }
       h3.bio-name {
         text-transform: uppercase;
         color: $primary-color-dark;
@@ -337,8 +427,11 @@ h3.sidebar-header {
     }
     .bio-excerpt {
       font-size: 95%;
-      line-height: 120%;
+      line-height: 135%;
       padding-bottom: $box_padding;
+      @media #{$small-only} { 
+        padding-bottom: $small_box_padding * 2;
+      }
     }
     .read-more {
       margin-bottom: 0;
@@ -346,6 +439,9 @@ h3.sidebar-header {
       bottom: $box_padding;
       right: 45px;
       width: 100%;
+      @media #{$small-only} { 
+        bottom: $small_box_padding;
+      }
     }
   }
 }
@@ -355,10 +451,17 @@ h3.sidebar-header {
   margin-top: $box_padding / 2;
   min-height: 222px;
   line-height: 150%;
+  @media #{$small-only} { 
+    margin-top: $small_box_padding / 2;
+  }
   img {
     float: left;
     margin-right: $box_padding;
     margin-bottom: $box_padding;
+    @media #{$small-only} { 
+      margin-right: $small_box_padding;
+      margin-bottom: $small_box_padding;
+    }
   }
   h1 {
     color: $primary-color-dark;
@@ -367,14 +470,23 @@ h3.sidebar-header {
   .detailed-bio-title {
     font-family: $body-font-italic;
     margin-bottom: $page_element_spacing / 2;
+    @media #{$small-only} { 
+      margin-bottom: $small_page_element_spacing / 2;
+    }
   }
   span, a {
     display: block;
   }
   .interest-areas {
     margin-top: $page_element_spacing / 2;
+    @media #{$small-only} { 
+      margin-top: $small_page_element_spacing / 2;
+    }
   }
 }
 .detailed-bio-desc {
   margin-top: $box_padding;
+  @media #{$small-only} { 
+    margin-top: $small_box_padding;
+  }
 }

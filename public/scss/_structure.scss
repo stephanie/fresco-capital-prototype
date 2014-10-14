@@ -43,11 +43,17 @@ h1 {
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 220%;
+  @media #{$small-only} { 
+    font-size: 180%;
+  }
 }
 
 h3 {
-  font-size: 150%;
+  font-size: 155%;
+  @media #{$small-only} { 
+    font-size: 125%;
+  }
 }
 
 a {
@@ -69,10 +75,9 @@ $container-size: 1200px;
 
 //spacing
 $page_element_spacing: 1.875rem;
-
 $side_padding: 3%;
-@media #{$small-only} { 
-  $side_padding: 5%;
-}
-
 $box_padding: 25px;
+
+$small_page_element_spacing: 1.875rem;
+$small_side_padding: 5%;
+$small_box_padding: 20px;
