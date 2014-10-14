@@ -367,6 +367,9 @@ h3.sidebar-header {
 }
 //our companies
 .companies-filters {
+  @media #{$small-only} { 
+    margin-bottom: $page_element_spacing;
+  }
   .company-filter-header h3 {
     color: $primary-color-light;
     margin-top: $page_element_spacing;
@@ -400,13 +403,115 @@ h3.sidebar-header {
 //   }
 // }
 
+.companies-boxes {
+  margin-bottom: -$side_padding / 2;
+  @media #{$small-only} { 
+    margin-bottom: -$small_side_padding / 2;
+  }
+  .columns {
+    padding: 0;
+    margin-bottom: $box_padding;
+    @media #{$small-only} { 
+      margin-bottom: $small_box_padding;
+    }
+  }
+  .row {
+    padding-left: $side_padding;
+    padding-bottom: $side_padding;
+    @media #{$small-only} { 
+      padding-left: $small_side_padding;
+      padding-bottom: $small_side_padding;
+    }
+  }
+}
+.company-box-container, .company-box {
+  height: 220px; //no js fallback
+  position: relative;
+  margin-left: $side_padding;
+  margin-right: $side_padding;
+  @media #{$small-only} { 
+    margin: 0;
+  }
+}
 .company-box {
   position: absolute;
-  background-image: url(../images/edpuzzle_logo.png);
   background-repeat: no-repeat;
   background-position: center center;
   right: 0;
   width: 100%;
+}
+.company-box-container {
+  .front {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .back {
+    z-index: 1;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  &.flip .front {
+    z-index: 2;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+  &.flip .back {
+    z-index: 1;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+.company-box .company-box-content {
+  padding: $box_padding;
+  @media #{$small-only} { 
+    padding: $small_box_padding;
+  }
+  .company-categories {
+    min-height: 2em;
+    color: $secondary-color;
+  }
+  .company-slogan {
+    text-align: center;
+    margin-top: 13.5%;
+    font-family: $body-font-italic;
+  }
+  .company-link {
+    position: absolute;
+    bottom: $box_padding / 2;
+    right: $box_padding / 2;
+    @media #{$small-only} { 
+      bottom: $small_box_padding / 2;
+      right: $small_box_padding / 2;
+    }
+    img {
+      max-width: 60%;
+    }
+  }
 }
 
 //who we are

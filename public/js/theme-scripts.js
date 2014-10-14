@@ -51,6 +51,10 @@ $(document).ready(function() {
   // alignBoxHeight($home_box);
   // alignBoxHeight($member_box);
 
+  $('.company-box-container').click(function(){
+    $(this).toggleClass('flip');
+  });
+
 });// Ready
 
 $(window).resize(function() {

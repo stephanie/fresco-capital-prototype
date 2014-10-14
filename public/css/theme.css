@@ -7330,6 +7330,9 @@ h3.sidebar-header {
       vertical-align: middle;
       line-height: 1.3; }
 
+@media only screen and (max-width: 40em) {
+  .companies-filters {
+    margin-bottom: 1.875rem; } }
 .companies-filters .company-filter-header h3 {
   color: #686680;
   margin-top: 1.875rem;
@@ -7345,13 +7348,100 @@ h3.sidebar-header {
   color: #E46C0A;
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
+.companies-boxes {
+  margin-bottom: -1.5%; }
+  @media only screen and (max-width: 40em) {
+    .companies-boxes {
+      margin-bottom: -2.5%; } }
+  .companies-boxes .columns {
+    padding: 0;
+    margin-bottom: 25px; }
+    @media only screen and (max-width: 40em) {
+      .companies-boxes .columns {
+        margin-bottom: 20px; } }
+  .companies-boxes .row {
+    padding-left: 3%;
+    padding-bottom: 3%; }
+    @media only screen and (max-width: 40em) {
+      .companies-boxes .row {
+        padding-left: 5%;
+        padding-bottom: 5%; } }
+
+.company-box-container, .company-box {
+  height: 220px;
+  position: relative;
+  margin-left: 3%;
+  margin-right: 3%; }
+  @media only screen and (max-width: 40em) {
+    .company-box-container, .company-box {
+      margin: 0; } }
+
 .company-box {
   position: absolute;
-  background-image: url(../images/edpuzzle_logo.png);
   background-repeat: no-repeat;
   background-position: center center;
   right: 0;
   width: 100%; }
+
+.company-box-container .front {
+  z-index: 2;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+.company-box-container .back {
+  z-index: 1;
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateY(-180deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+.company-box-container.flip .front {
+  z-index: 2;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg); }
+.company-box-container.flip .back {
+  z-index: 1;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg); }
+
+.company-box .company-box-content {
+  padding: 25px; }
+  @media only screen and (max-width: 40em) {
+    .company-box .company-box-content {
+      padding: 20px; } }
+  .company-box .company-box-content .company-categories {
+    min-height: 2em;
+    color: #E46C0A; }
+  .company-box .company-box-content .company-slogan {
+    text-align: center;
+    margin-top: 13.5%;
+    font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif; }
+  .company-box .company-box-content .company-link {
+    position: absolute;
+    bottom: 12.5px;
+    right: 12.5px; }
+    @media only screen and (max-width: 40em) {
+      .company-box .company-box-content .company-link {
+        bottom: 10px;
+        right: 10px; } }
+    .company-box .company-box-content .company-link img {
+      max-width: 60%; }
 
 .bio-box {
   min-height: 17.2em; }
