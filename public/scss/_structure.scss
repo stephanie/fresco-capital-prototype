@@ -1,6 +1,9 @@
 html {
   font-size: $base-font-size;
   margin-top: 0 !important;
+  @media #{$small-only} { 
+    font-size: 90%;
+  }
 }
 
 body {
@@ -27,7 +30,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.375em; /* 38 / 16 */
+  font-size: 250%; /* 38 / 16 */
   text-transform: capitalize;
 }
 
@@ -40,11 +43,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875em;
+  font-size: 200%;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 150%;
 }
 
 a {
@@ -63,3 +66,13 @@ $container-size: 1200px;
   max-width: $container-size;
   margin: 0 auto;
 }
+
+//spacing
+$page_element_spacing: 1.875rem;
+
+$side_padding: 3%;
+@media #{$small-only} { 
+  $side_padding: 5%;
+}
+
+$box_padding: 25px;

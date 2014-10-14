@@ -22,9 +22,9 @@
   h1 {
     margin-top: 0;
     padding-top: 0.5rem;
-    margin-bottom: 1rem;
   }
   p {
+    margin-top: 1rem;
     color: $white;
     margin-bottom: 1rem;
   }
@@ -33,7 +33,7 @@
   h2 {
     margin-top: $page_element_spacing;
     margin-bottom: 0;
-    font-size: 2.375em;
+    font-size: 200%;
     color: $primary-color-dark;
     padding-left: $side_padding;
   }
@@ -43,7 +43,7 @@
 }
 .breadcrumb, .breadcrumb a {
   color: $primary-color-light;
-  font-size: 0.93em;
+  font-size: 95%;
 }
 .breadcrumb a:hover {
   color: $secondary-color;
@@ -117,10 +117,10 @@ h3.sidebar-header {
     }
   }
   .author-desc {
-    font-size: 0.9em;
+    font-size: 95%;
   }
 }
-.members-sidebar {
+.teams-sidebar {
   a {
     display: block;
     line-height: 165%;
@@ -143,6 +143,9 @@ h3.sidebar-header {
     .slick-next {
       right: $box_padding;
     }
+    img {
+      max-width: none;
+    }
   }
 }
 
@@ -151,13 +154,23 @@ h3.sidebar-header {
   position: absolute;
   top: 50%;
   left: 80px;
-  width: 55%;
-  height: 16%;
-  margin-top: -8%;
+  width: 50%;
+  height: 14%;
+  margin-top: -7%;
   text-shadow: 0px 2px 4px $primary-color-dark;
-  h2 {
-    font-size: 2.3em;
-    font-size: 2.9vw;
+  @media #{$medium-only} { 
+    width: 57%;
+  }
+  @media #{$small-only} {
+    bottom: 230px;
+    top: auto;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  h1, h2 {
+    font-size: 250%;
     line-height: 1.15;
   }
 }
@@ -181,17 +194,17 @@ h3.sidebar-header {
   .home-box-content {
     padding: 5% 10%;
     p, h3 {
-      line-height: 1.2;
+      line-height: 135%;
     }
     h3 {
       color: $primary-color-dark;
       font-family: $body-font-medium-italic;
-      font-size: 1.1em;
+      font-size: 120%;
       margin-bottom: 1.25rem;
     }
     p.read-more {
       width: 100%;
-      font-size: 0.91em;
+      font-size: 95%;
       margin-bottom: 0.5rem;
     }
   }
@@ -204,6 +217,9 @@ h3.sidebar-header {
     padding: $box_padding;
     padding-bottom: $box_padding - 5;
     margin-bottom: 5px;
+    @media #{$small-only} { 
+      margin-right: 0;
+    }
     &.selected {
       margin-bottom: 0;
       border-bottom: 5px solid $secondary-color;
@@ -225,7 +241,7 @@ h3.sidebar-header {
   margin-left: $side_padding;
 }
 .process-slider-header {
-  font-size: 1.25em;
+  font-size: 120%;
   line-height: 130%;
   color: $primary-color-dark;
   position: absolute;
@@ -235,26 +251,43 @@ h3.sidebar-header {
   height: 80px;
   margin-top: -40px;
   text-align: center;
+  @media #{$small-only} { 
+    font-size: 110%;
+    height: 170px;
+    margin-top: -85px;
+  }
 }
 .values-container {
   margin-top: $page_element_spacing;
 }
 .value-box {
   margin-top: 0;
-  margin-bottom: $page_element_spacing / 2;
   min-height: 4.5em;
+  &.row {
+    padding: 0;
+    margin: 0;
+    margin-bottom: $page_element_spacing / 2;
+  }
   .value-header {
     float: left;
     background-color: $primary-color-light;
     padding: $box_padding;
-    margin-right: $box_padding;
+    text-align: center;
     h3 {
       margin: 0;
       text-transform: uppercase;
     }
   }
   .value-desc {
-    padding: 29px;
+    display: table;
+    min-height: 75px;
+    padding-top: 3px;
+    p {
+      display: inline-block; //ie fix for vertical align
+      display: table-cell;
+      vertical-align: middle;
+      line-height: 1.3;
+    }
   }
 }
 //our companies
@@ -276,9 +309,9 @@ h3.sidebar-header {
 }
 
 //who we are
-.team-member-box {
+.bio-box {
   min-height: 17.2em;
-  .member-box-img {
+  .bio-box-img {
     img {
       float: left;
       margin: $box_padding;
@@ -286,33 +319,39 @@ h3.sidebar-header {
       height: 222px;
     }
   }
-  .member-box-content {
+  .bio-box-content {
     margin: $box_padding;
-    padding-bottom: 35px;
-  }
-  h3.member-name {
-    text-transform: uppercase;
-    color: $primary-color-dark;
-    margin: 0;
-  }
-  .member-title {
-    font-family: $body-font-italic;
-  }
-  .member-excerpt {
-    font-size: 0.9em;
-    line-height: 120%;
-  }
-  .read-more {
-    margin-bottom: 0;
-    position: absolute;
-    bottom: $box_padding;
-    right: 45px;
-    width: 100%;
+    .bio-box-top {
+      margin-bottom: $box_padding;
+      h3.bio-name {
+        text-transform: uppercase;
+        color: $primary-color-dark;
+        margin: 0;
+      }
+      .bio-title {
+        font-family: $body-font-italic;
+      }
+      p {
+        margin: 0
+      }
+    }
+    .bio-excerpt {
+      font-size: 95%;
+      line-height: 120%;
+      padding-bottom: $box_padding;
+    }
+    .read-more {
+      margin-bottom: 0;
+      position: absolute;
+      bottom: $box_padding;
+      right: 45px;
+      width: 100%;
+    }
   }
 }
 
 //who we are detailed page
-.detailed-member-top {
+.detailed-bio-top {
   margin-top: $box_padding / 2;
   min-height: 222px;
   line-height: 150%;
@@ -325,7 +364,7 @@ h3.sidebar-header {
     color: $primary-color-dark;
     margin: 0;
   }
-  .detailed-member-title {
+  .detailed-bio-title {
     font-family: $body-font-italic;
     margin-bottom: $page_element_spacing / 2;
   }
@@ -336,6 +375,6 @@ h3.sidebar-header {
     margin-top: $page_element_spacing / 2;
   }
 }
-.detailed-member-desc {
+.detailed-bio-desc {
   margin-top: $box_padding;
 }

@@ -6861,6 +6861,9 @@ Import custom theme styles
 html {
   font-size: 100%;
   margin-top: 0 !important; }
+  @media only screen and (max-width: 40em) {
+    html {
+      font-size: 90%; } }
 
 body {
   font-family: "Franklin Gothic Book", "Helvetica", Helvetica, Arial, sans-serif;
@@ -6882,7 +6885,7 @@ h1, h2, h3 {
   font-family: "Marat Medium", Georgia, "Times New Roman", serif; }
 
 h1 {
-  font-size: 2.375em;
+  font-size: 250%;
   /* 38 / 16 */
   text-transform: capitalize; }
 
@@ -6893,10 +6896,10 @@ h1 {
   color: #27244A; }
 
 h2 {
-  font-size: 1.875em; }
+  font-size: 200%; }
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 150%; }
 
 a {
   font-family: inherit;
@@ -6909,6 +6912,8 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto; }
+
+@media only screen and (max-width: 40em) { }
 
 ul.nav {
   margin: 0;
@@ -6924,25 +6929,45 @@ ul.nav {
   text-rendering: optimizeLegibility;
   text-transform: uppercase; }
 
+.header-logo {
+  padding-top: 4%;
+  padding-bottom: 4%; }
+  @media (max-width: 1200px) {
+    .header-logo {
+      padding-left: 5%; } }
+  @media only screen and (max-width: 40em) {
+    .header-logo {
+      padding-top: 8%;
+      padding-bottom: 8%;
+      margin-top: -2px; } }
+  .header-logo img {
+    width: 29%; }
+    @media only screen and (max-width: 40em) {
+      .header-logo img {
+        width: 65%;
+        float: left; } }
+
 .navbar {
   background-color: #27244A;
   padding-left: 2px; }
   .navbar ul.header-nav li {
-    padding: 2% 3%;
-    margin-left: -2px;
-    margin-right: -2px; }
+    padding: 2% 5%;
+    margin: 0 -2px -2px -2px; }
+    @media only screen and (max-width: 40em) {
+      .navbar ul.header-nav li {
+        display: none; } }
   .navbar ul.header-nav li:hover, .navbar ul.header-nav li.current-menu-item {
     background-color: #686680; }
+  @media only screen and (max-width: 40em) {
+    .navbar ul.header-nav li.current-menu-item {
+      display: inline-block;
+      padding: 3% 5%; } }
 
-.header-logo {
-  padding-top: 4%;
-  padding-bottom: 4%; }
-  .header-logo img {
-    width: 29%;
-    min-width: 250px; }
-  @media (max-width: 1200px) {
-    .header-logo {
-      padding-left: 4%; } }
+.mobile-menu {
+  color: #27244A;
+  text-align: right;
+  margin-right: 5%;
+  margin-top: 2px; }
 
 .footer {
   padding-top: 2%;
@@ -6985,28 +7010,28 @@ ul.nav {
 
 .page-header-container {
   background-color: #686680;
-  padding: 2% 3%; }
+  padding: 2% 5%; }
   .page-header-container h1 {
     margin-top: 0;
-    padding-top: 0.5rem;
-    margin-bottom: 1rem; }
+    padding-top: 0.5rem; }
   .page-header-container p {
+    margin-top: 1rem;
     color: #fff;
     margin-bottom: 1rem; }
 
 .page-content-header h2 {
   margin-top: 1.875rem;
   margin-bottom: 0;
-  font-size: 2.375em;
+  font-size: 200%;
   color: #27244A;
-  padding-left: 3%; }
+  padding-left: 5%; }
 
 .italic-text {
   font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .breadcrumb, .breadcrumb a {
   color: #686680;
-  font-size: 0.93em; }
+  font-size: 95%; }
 
 .breadcrumb a:hover {
   color: #E46C0A; }
@@ -7059,14 +7084,14 @@ h3.sidebar-header {
     font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif;
     color: #27244A; }
 .author-sidebar .author-desc {
-  font-size: 0.9em; }
+  font-size: 95%; }
 
-.members-sidebar a {
+.teams-sidebar a {
   display: block;
   line-height: 165%; }
-  .members-sidebar a.selected {
+  .teams-sidebar a.selected {
     color: #E46C0A; }
-  .members-sidebar a.selected {
+  .teams-sidebar a.selected {
     font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .slider-container {
@@ -7075,18 +7100,30 @@ h3.sidebar-header {
     left: 25px; }
   .slider-container .slider .slick-next {
     right: 25px; }
+  .slider-container .slider img {
+    max-width: none; }
 
 .home-slider-header {
   position: absolute;
   top: 50%;
   left: 80px;
-  width: 55%;
-  height: 16%;
-  margin-top: -8%;
+  width: 50%;
+  height: 14%;
+  margin-top: -7%;
   text-shadow: 0px 2px 4px #27244A; }
-  .home-slider-header h2 {
-    font-size: 2.3em;
-    font-size: 2.9vw;
+  @media only screen and (min-width:40.063em) and (max-width:64em) {
+    .home-slider-header {
+      width: 57%; } }
+  @media only screen and (max-width: 40em) {
+    .home-slider-header {
+      bottom: 230px;
+      top: auto;
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  .home-slider-header h1, .home-slider-header h2 {
+    font-size: 250%;
     line-height: 1.15; }
 
 .home-slider-subheader {
@@ -7108,15 +7145,15 @@ h3.sidebar-header {
   .home-box .home-box-content {
     padding: 5% 10%; }
     .home-box .home-box-content p, .home-box .home-box-content h3 {
-      line-height: 1.2; }
+      line-height: 135%; }
     .home-box .home-box-content h3 {
       color: #27244A;
       font-family: "Franklin Gothic Medium Italic", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 1.1em;
+      font-size: 120%;
       margin-bottom: 1.25rem; }
     .home-box .home-box-content p.read-more {
       width: 100%;
-      font-size: 0.91em;
+      font-size: 95%;
       margin-bottom: 0.5rem; }
 
 .process-slider-nav li {
@@ -7124,6 +7161,9 @@ h3.sidebar-header {
   padding: 25px;
   padding-bottom: 20px;
   margin-bottom: 5px; }
+  @media only screen and (max-width: 40em) {
+    .process-slider-nav li {
+      margin-right: 0; } }
   .process-slider-nav li.selected {
     margin-bottom: 0;
     border-bottom: 5px solid #E46C0A; }
@@ -7136,11 +7176,11 @@ h3.sidebar-header {
       color: #E46C0A; }
 
 .process-slider {
-  margin-right: 3%;
-  margin-left: 3%; }
+  margin-right: 5%;
+  margin-left: 5%; }
 
 .process-slider-header {
-  font-size: 1.25em;
+  font-size: 120%;
   line-height: 130%;
   color: #27244A;
   position: absolute;
@@ -7150,24 +7190,39 @@ h3.sidebar-header {
   height: 80px;
   margin-top: -40px;
   text-align: center; }
+  @media only screen and (max-width: 40em) {
+    .process-slider-header {
+      font-size: 110%;
+      height: 170px;
+      margin-top: -85px; } }
 
 .values-container {
   margin-top: 1.875rem; }
 
 .value-box {
   margin-top: 0;
-  margin-bottom: 0.9375rem;
   min-height: 4.5em; }
+  .value-box.row {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.9375rem; }
   .value-box .value-header {
     float: left;
     background-color: #686680;
     padding: 25px;
-    margin-right: 25px; }
+    text-align: center; }
     .value-box .value-header h3 {
       margin: 0;
       text-transform: uppercase; }
   .value-box .value-desc {
-    padding: 29px; }
+    display: table;
+    min-height: 75px;
+    padding-top: 3px; }
+    .value-box .value-desc p {
+      display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+      line-height: 1.3; }
 
 .companies-filters .company-filter-header h3 {
   color: #686680;
@@ -7181,52 +7236,56 @@ h3.sidebar-header {
   color: #E46C0A;
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
-.team-member-box {
+.bio-box {
   min-height: 17.2em; }
-  .team-member-box .member-box-img img {
+  .bio-box .bio-box-img img {
     float: left;
     margin: 25px;
     width: 222px;
     height: 222px; }
-  .team-member-box .member-box-content {
-    margin: 25px;
-    padding-bottom: 35px; }
-  .team-member-box h3.member-name {
-    text-transform: uppercase;
-    color: #27244A;
-    margin: 0; }
-  .team-member-box .member-title {
-    font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif; }
-  .team-member-box .member-excerpt {
-    font-size: 0.9em;
-    line-height: 120%; }
-  .team-member-box .read-more {
-    margin-bottom: 0;
-    position: absolute;
-    bottom: 25px;
-    right: 45px;
-    width: 100%; }
+  .bio-box .bio-box-content {
+    margin: 25px; }
+    .bio-box .bio-box-content .bio-box-top {
+      margin-bottom: 25px; }
+      .bio-box .bio-box-content .bio-box-top h3.bio-name {
+        text-transform: uppercase;
+        color: #27244A;
+        margin: 0; }
+      .bio-box .bio-box-content .bio-box-top .bio-title {
+        font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif; }
+      .bio-box .bio-box-content .bio-box-top p {
+        margin: 0; }
+    .bio-box .bio-box-content .bio-excerpt {
+      font-size: 95%;
+      line-height: 120%;
+      padding-bottom: 25px; }
+    .bio-box .bio-box-content .read-more {
+      margin-bottom: 0;
+      position: absolute;
+      bottom: 25px;
+      right: 45px;
+      width: 100%; }
 
-.detailed-member-top {
+.detailed-bio-top {
   margin-top: 12.5px;
   min-height: 222px;
   line-height: 150%; }
-  .detailed-member-top img {
+  .detailed-bio-top img {
     float: left;
     margin-right: 25px;
     margin-bottom: 25px; }
-  .detailed-member-top h1 {
+  .detailed-bio-top h1 {
     color: #27244A;
     margin: 0; }
-  .detailed-member-top .detailed-member-title {
+  .detailed-bio-top .detailed-bio-title {
     font-family: "Franklin Gothic Book Italic", "Helvetica", Helvetica, Arial, sans-serif;
     margin-bottom: 0.9375rem; }
-  .detailed-member-top span, .detailed-member-top a {
+  .detailed-bio-top span, .detailed-bio-top a {
     display: block; }
-  .detailed-member-top .interest-areas {
+  .detailed-bio-top .interest-areas {
     margin-top: 0.9375rem; }
 
-.detailed-member-desc {
+.detailed-bio-desc {
   margin-top: 25px; }
 
 /*==========  Foundation Media Queries - copy/paste from here if needed  ==========*/
