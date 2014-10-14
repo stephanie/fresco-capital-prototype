@@ -7345,6 +7345,18 @@ h3.sidebar-header {
   color: #E46C0A;
   font-family: "Franklin Gothic Medium", "Helvetica", Helvetica, Arial, sans-serif; }
 
+.company-box {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  display: block; }
+  .company-box * {
+    vertical-align: middle; }
+  .company-box span {
+    display: inline-block;
+    height: 100%;
+    width: 1px; }
+
 .bio-box {
   min-height: 17.2em; }
   .bio-box .bio-box-img img {
